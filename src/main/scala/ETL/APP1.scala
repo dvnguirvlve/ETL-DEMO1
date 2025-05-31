@@ -1,12 +1,12 @@
 package ETL
 
-import ETL.Main.{Client_path, Produit_path, Vente_path, hdfs_path}
+import ETL.APP1.{Client_path, Produit_path, Vente_path, hdfs_path}
 import ETL.engine.{Constant, Engine, READ, WRITE, csvToHdfs}
 import ETL.utils.DropEmptyColumns
 import org.apache.spark.sql.{DataFrame, functions}
 import org.apache.spark.sql.functions.{col, lit, sum, upper}
 
-object Main extends Constant {
+object APP1 extends Constant {
   def main(args : Array[String]): Unit = {
 
     System.setProperty("hadoop.home.dir", "C:/hadoop")
